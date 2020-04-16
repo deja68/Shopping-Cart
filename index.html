@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Shopping cart</title>
+</head>
+<body>
+    <div class="container">
+        <div class="add-product">
+          <form id="form">
+            <div>
+              <label>Product name:</label>
+              <input id = "productName" type="text" placeholder="Casio Watch" />
+            </div>
+            
+            <div>
+              <label>Product description:</label>
+              <textarea id = "productDescription" placeholder="Sample description..."></textarea>
+            </div>
+            
+            <div>
+              <label>Product image:</label>
+              <input id = "productImg" type="text" placeholder="http://...jpg" />
+            </div>
+            
+            <div>
+              <label>Product price:</label>
+              <input id = "productPrice" type="number" min="0" placeholder="33.50" />
+            </div>
+            
+            <button id="add" >Add</button>
+          </form>
+        </div>
+  
+        
+        <div class="list-products">
+          <div class="product">
+            <img class = "lpImg" src="https://sc02.alicdn.com/kf/HTB1gHRfg6uhSKJjSspmq6AQDpXaI/Accept-Sample-Design-Your-Own-Blank-Wrist.jpg_350x350.jpg" />
+            <p class = "lpName">Sample Watch</p>
+            <p class = "price">$199</p>
+            <p class="first2prodocustsDescription"></p>
+            <button class="details-button">Details</button>
+            <button class="buy-button">Buy</button>
+          </div>
+          
+          <div class="product">
+            <img class = "lpImg" src="https://pl.shadestation.com/media/thumbs/350x350/media/product_images/Fossil-Watches-FS5439fw350fh350.jpg" />
+            <p class = "lpName">Product #2</p>
+            <p class = "price">$230</p>
+            <p class="first2prodocustsDescription"></p>
+            <button class="details-button">Details</button>
+            <button class="buy-button">Buy</button>
+          </div>
+          
+        </div>
+        
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2 id = "header"></h2>
+            </div>
+            <div class="modal-body">
+              <img id = "modalImg" src = "" />
+            </div>
+            <div class="modal-footer">
+              <h3 id = "footer"></h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="shopping-cart">
+          <div class="shopping-cart-products">
+            <div class="shopping-cart-product">
+              <div class="product-info">
+                <div class = "product">
+                  <h3 class ="prodName">Sample Watch</h3>
+                  <p class="prodPrice">$199 &times; 1</p>
+                </div>
+                <img class = "prodImg" src="https://sc02.alicdn.com/kf/HTB1gHRfg6uhSKJjSspmq6AQDpXaI/Accept-Sample-Design-Your-Own-Blank-Wrist.jpg_350x350.jpg" />
+              </div>
+              <div class="product-count">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+            
+            <div class="shopping-cart-product">
+              <div class="product-info">
+                <div class = "product">
+                  <h3 class ="prodName">Product #2</h3>
+                  <p class = "prodPrice">$230 &times; 1</p>
+                </div>
+                <img class = "prodImg" src="https://pl.shadestation.com/media/thumbs/350x350/media/product_images/Fossil-Watches-FS5439fw350fh350.jpg" />
+              </div>
+              <div class="product-count">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+            
+          </div>
+          <div class="shopping-cart-summary">
+            <div>Total: <b>$429</b></div>
+            <div><button>Purchase</button></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
